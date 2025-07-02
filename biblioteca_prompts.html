@@ -1,10 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca de Prompts - PIMP-JP</title>
+    <meta name="description" content="Coleção curada de prompts de alta performance para IA Generativa no estudo da medicina. Prompts prontos para usar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -15,14 +18,14 @@
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="guia_prompt_engineering.html">Guia de Prompt Engineering</a></li>
-                    <li><a href="biblioteca_prompts.html">Biblioteca de Prompts</a></li>
+                    <li><a href="biblioteca_prompts.html" aria-current="page">Biblioteca de Prompts</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Módulos</a>
-                        <div class="dropdown-content">
-                            <a href="modulos/patologia/index.html">Patologia</a>
-                            <a href="modulos/imunologia/index.html">Imunologia</a>
-                            <a href="modulos/microbiologia/index.html">Microbiologia</a>
-                            <a href="modulos/parasitologia/index.html">Parasitologia</a>
+                        <a href="#" class="dropbtn" role="button" aria-haspopup="true" aria-expanded="false">Módulos</a>
+                        <div class="dropdown-content" role="menu">
+                            <a href="modulos/patologia/index.html" role="menuitem">Patologia</a>
+                            <a href="modulos/imunologia/index.html" role="menuitem">Imunologia</a>
+                            <a href="modulos/microbiologia/index.html" role="menuitem">Microbiologia</a>
+                            <a href="modulos/parasitologia/index.html" role="menuitem">Parasitologia</a>
                         </div>
                     </li>
                 </ul>
@@ -34,9 +37,11 @@
         <section id="prompt-library-intro">
             <div class="container">
                 <h2>Biblioteca de Prompts de Alta Performance</h2>
-                <p>Aqui você encontrará uma vasta coleção de prompts cuidadosamente elaborados para otimizar suas interações com Inteligências Artificiais Generativas (IAGs) no estudo da medicina. Utilize-os como estão ou adapte-os às suas necessidades específicas. Lembre-se de que a prática leva à perfeição no Prompt Engineering!</p>
+                <div class="content-text">
+                    <p>Aqui você encontrará uma vasta coleção de prompts cuidadosamente elaborados para otimizar suas interações com Inteligências Artificiais Generativas (IAGs) no estudo da medicina. Utilize-os como estão ou adapte-os às suas necessidades específicas. Lembre-se de que a prática leva à perfeição no Prompt Engineering!</p>
+                </div>
                 <div class="search-bar">
-                    <input type="text" id="promptSearch" onkeyup="filterPrompts()" placeholder="Buscar prompts...">
+                    <input type="text" id="promptSearch" onkeyup="filterPrompts()" placeholder="🔍 Buscar prompts..." aria-label="Buscar prompts">
                 </div>
             </div>
         </section>
@@ -45,227 +50,233 @@
             <div class="container">
                 <h3>Categorias de Prompts</h3>
 
-                <div class="category-section">
-                    <h4>Raciocínio Diagnóstico</h4>
+                <div class="category-section" data-category="diagnostico">
+                    <h4>🩺 Raciocínio Diagnóstico</h4>
                     <div class="prompt-list">
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um médico experiente em clínica médica. Um paciente de 45 anos, sexo feminino, chega ao pronto-socorro de João Pessoa com dor abdominal aguda no quadrante inferior direito, febre baixa e náuseas. Qual o diagnóstico diferencial mais provável e quais exames complementares você solicitaria para confirmar?</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Simule uma discussão de caso clínico com um colega. Apresente um paciente com tosse persistente há 3 semanas, perda de peso e sudorese noturna, residente em área periférica de João Pessoa. Quais as hipóteses diagnósticas e o plano de investigação inicial, considerando a epidemiologia local?</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um infectologista. Descreva o raciocínio diagnóstico para um caso de febre de origem obscura em um paciente imunocomprometido em João Pessoa, listando as principais causas infecciosas e não infecciosas a serem consideradas na Paraíba.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um neurologista. Um paciente de 60 anos, com histórico de hipertensão, apresenta súbita hemiparesia direita e afasia. Descreva o raciocínio diagnóstico para acidente vascular cerebral, diferenciando isquêmico de hemorrágico, e os passos iniciais de manejo em um hospital de referência em João Pessoa.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um pediatra. Uma criança de 2 anos, residente em área com saneamento básico deficiente em João Pessoa, apresenta diarreia aquosa intensa, vômitos e desidratação. Quais os diagnósticos diferenciais mais comuns para diarreia aguda infantil na região e qual a conduta inicial?</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um cardiologista. Um paciente de 70 anos, com histórico de diabetes e dislipidemia, refere dor torácica opressiva irradiando para o braço esquerdo, desencadeada por esforço. Descreva o raciocínio diagnóstico para síndrome coronariana aguda e a importância do eletrocardiograma e biomarcadores cardíacos.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um nefrologista. Um paciente com doença renal crônica em estágio avançado apresenta edema generalizado e oligúria. Descreva o raciocínio diagnóstico para as causas de piora da função renal e as opções de tratamento, incluindo a necessidade de diálise.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um gastroenterologista. Um paciente de 50 anos, com histórico de etilismo, apresenta icterícia, dor abdominal e ascite. Descreva o raciocínio diagnóstico para cirrose hepática e suas complicações, e os exames necessários para avaliação.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um endocrinologista. Uma paciente de 30 anos refere fadiga, ganho de peso e intolerância ao frio. Descreva o raciocínio diagnóstico para hipotireoidismo e os exames laboratoriais para confirmação.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Aja como um reumatologista. Uma paciente jovem apresenta dor e inchaço em múltiplas articulações, rigidez matinal e lesões cutâneas. Descreva o raciocínio diagnóstico para lúpus eritematoso sistêmico e os critérios diagnósticos.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="category-section">
-                    <h4>Compreensão de Fisiopatologia</h4>
+                <div class="category-section" data-category="fisiopatologia">
+                    <h4>🧬 Compreensão de Fisiopatologia</h4>
                     <div class="prompt-list">
                         <div class="prompt-item">
                             <p class="prompt-text">Explique a fisiopatologia da sepse e choque séptico, detalhando os mecanismos moleculares e celulares envolvidos na disfunção orgânica. Use uma linguagem clara e didática, como se estivesse explicando para um estudante do 3º ano de medicina.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Descreva os mecanismos fisiopatológicos da hipertensão arterial sistêmica essencial, abordando os fatores genéticos, ambientais e os sistemas regulatórios envolvidos (SRAA, SNA, etc.).</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Explique a fisiopatologia do Diabetes Mellitus Tipo 2, focando na resistência à insulina e na disfunção das células beta pancreáticas. Inclua a relação com a obesidade e o estilo de vida.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Detalhe a fisiopatologia da asma brônquica, incluindo a inflamação das vias aéreas, hiperresponsividade brônquica e remodelamento. Mencione os principais mediadores inflamatórios.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Descreva a fisiopatologia da insuficiência cardíaca com fração de ejeção reduzida (ICFER), abordando os mecanismos de compensação e descompensação cardíaca.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Explique a fisiopatologia da doença de Alzheimer, focando na formação de placas amiloides e emaranhados neurofibrilares, e seus impactos na função neuronal.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Descreva os mecanismos fisiopatológicos da doença pulmonar obstrutiva crônica (DPOC), incluindo enfisema e bronquite crônica, e a relação com o tabagismo.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Explique a fisiopatologia da anemia falciforme, detalhando a alteração molecular, a deformação dos eritrócitos e as consequências clínicas.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Descreva a fisiopatologia da osteoporose, abordando o desequilíbrio entre formação e reabsorção óssea e os fatores de risco.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                         <div class="prompt-item">
                             <p class="prompt-text">Explique a fisiopatologia da pancreatite aguda, incluindo a autodigestão pancreática e a resposta inflamatória sistêmica.</p>
-                            <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="category-section">
-                    <h4>Interpretação Laboratorial</h4>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um patologista clínico. Interprete o seguinte hemograma completo de um paciente com suspeita de dengue em João Pessoa: Hemácias 4.0 x 10^6/uL, Hemoglobina 12 g/dL, Hematócrito 36%, Leucócitos 3.500/uL (Neutrófilos 40%, Linfócitos 50%, Monócitos 8%, Eosinófilos 2%), Plaquetas 80.000/uL. Quais as alterações e o que elas sugerem?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um endocrinologista. Interprete os seguintes resultados de função tireoidiana: TSH 0.01 uUI/mL (VR: 0.4-4.0), T4 Livre 3.5 ng/dL (VR: 0.8-1.8). Qual o diagnóstico mais provável e a conduta inicial?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um nefrologista. Interprete os seguintes eletrólitos de um paciente com vômitos e diarreia: Sódio 125 mEq/L, Potássio 2.8 mEq/L, Cloro 90 mEq/L. Quais os distúrbios hidroeletrolíticos e como abordá-los?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um hepatologista. Interprete os seguintes exames hepáticos: TGO 200 U/L, TGP 250 U/L, Fosfatase Alcalina 150 U/L, GGT 180 U/L, Bilirrubina Total 3.0 mg/dL (Direta 2.0, Indireta 1.0). Quais as possíveis causas e a próxima etapa na investigação?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um reumatologista. Interprete os seguintes marcadores inflamatórios e autoanticorpos: PCR 50 mg/L (VR: <5), VHS 80 mm/h (VR: <20), Fator Reumatoide positivo, FAN padrão nuclear pontilhado fino 1:640. Quais as hipóteses diagnósticas?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um cardiologista. Interprete os seguintes biomarcadores cardíacos em um paciente com dor torácica: Troponina I 0.5 ng/mL (VR: <0.04), CK-MB 10 ng/mL (VR: <5). Qual a implicação clínica?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um pneumologista. Interprete os seguintes resultados de gasometria arterial de um paciente com dispneia: pH 7.25, pCO2 60 mmHg, pO2 70 mmHg, HCO3 24 mEq/L. Qual o distúrbio acidobásico e a provável causa?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um hematologista. Interprete os seguintes resultados de coagulograma: TP 25 segundos (VR: 10-14), INR 2.5, KPTT 40 segundos (VR: 25-35), Plaquetas 150.000/uL. Quais as alterações e o que elas indicam?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um infectologista. Interprete os seguintes resultados de cultura de urina: Crescimento de Escherichia coli > 10^5 UFC/mL, sensível a Ciprofloxacino e resistente a Amoxicilina. Qual a conduta terapêutica?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um nutricionista. Interprete os seguintes resultados de perfil lipídico: Colesterol Total 250 mg/dL, LDL 180 mg/dL, HDL 35 mg/dL, Triglicerídeos 200 mg/dL. Quais as implicações para a saúde cardiovascular?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                </div>
-
-                <div class="category-section">
-                    <h4>Mecanismos de Ação de Fármacos</h4>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Explique o mecanismo de ação da Losartana no tratamento da hipertensão arterial, detalhando sua interação com o sistema renina-angiotensina-aldosterona.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva o mecanismo de ação da Insulina no controle da glicemia, abordando seus efeitos nos tecidos-alvo (fígado, músculo, tecido adiposo).</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Explique o mecanismo de ação dos antibióticos beta-lactâmicos (ex: Penicilina, Amoxicilina) na inibição do crescimento bacteriano.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva o mecanismo de ação dos anti-inflamatórios não esteroidais (AINEs) na redução da dor e inflamação, focando na inibição das ciclooxigenases.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Explique o mecanismo de ação das estatinas (ex: Sinvastatina, Atorvastatina) na redução do colesterol, detalhando a via da HMG-CoA redutase.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva o mecanismo de ação dos diuréticos de alça (ex: Furosemida) na promoção da diurese e seu uso na insuficiência cardíaca.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Explique o mecanismo de ação dos antidepressivos inibidores seletivos da recaptação de serotonina (ISRS) no tratamento da depressão.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva o mecanismo de ação dos anticoagulantes orais diretos (DOACs) como a Rivaroxabana ou Apixabana na prevenção de tromboses.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Explique o mecanismo de ação dos broncodilatadores beta-2 agonistas (ex: Salbutamol) no alívio dos sintomas da asma.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva o mecanismo de ação dos quimioterápicos antimetabólitos (ex: Metotrexato) no tratamento do câncer.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                <div class="category-section" data-category="laboratorial">
+                    <h4>🔬 Interpretação Laboratorial</h4>
+                    <div class="prompt-list">
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um patologista clínico. Interprete o seguinte hemograma completo de um paciente com suspeita de dengue em João Pessoa: Hemácias 4.0 x 10^6/uL, Hemoglobina 12 g/dL, Hematócrito 36%, Leucócitos 3.500/uL (Neutrófilos 40%, Linfócitos 50%, Monócitos 8%, Eosinófilos 2%), Plaquetas 80.000/uL. Quais as alterações e o que elas sugerem?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um endocrinologista. Interprete os seguintes resultados de função tireoidiana: TSH 0.01 uUI/mL (VR: 0.4-4.0), T4 Livre 3.5 ng/dL (VR: 0.8-1.8). Qual o diagnóstico mais provável e a conduta inicial?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um nefrologista. Interprete os seguintes eletrólitos de um paciente com vômitos e diarreia: Sódio 125 mEq/L, Potássio 2.8 mEq/L, Cloro 90 mEq/L. Quais os distúrbios hidroeletrolíticos e como abordá-los?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um hepatologista. Interprete os seguintes exames hepáticos: TGO 200 U/L, TGP 250 U/L, Fosfatase Alcalina 150 U/L, GGT 180 U/L, Bilirrubina Total 3.0 mg/dL (Direta 2.0, Indireta 1.0). Quais as possíveis causas e a próxima etapa na investigação?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um reumatologista. Interprete os seguintes marcadores inflamatórios e autoanticorpos: PCR 50 mg/L (VR: <5), VHS 80 mm/h (VR: <20), Fator Reumatoide positivo, FAN padrão nuclear pontilhado fino 1:640. Quais as hipóteses diagnósticas?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um cardiologista. Interprete os seguintes biomarcadores cardíacos em um paciente com dor torácica: Troponina I 0.5 ng/mL (VR: <0.04), CK-MB 10 ng/mL (VR: <5). Qual a implicação clínica?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um pneumologista. Interprete os seguintes resultados de gasometria arterial de um paciente com dispneia: pH 7.25, pCO2 60 mmHg, pO2 70 mmHg, HCO3 24 mEq/L. Qual o distúrbio acidobásico e a provável causa?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um hematologista. Interprete os seguintes resultados de coagulograma: TP 25 segundos (VR: 10-14), INR 2.5, KPTT 40 segundos (VR: 25-35), Plaquetas 150.000/uL. Quais as alterações e o que elas indicam?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um infectologista. Interprete os seguintes resultados de cultura de urina: Crescimento de Escherichia coli > 10^5 UFC/mL, sensível a Ciprofloxacino e resistente a Amoxicilina. Qual a conduta terapêutica?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um nutricionista. Interprete os seguintes resultados de perfil lipídico: Colesterol Total 250 mg/dL, LDL 180 mg/dL, HDL 35 mg/dL, Triglicerídeos 200 mg/dL. Quais as implicações para a saúde cardiovascular?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="category-section">
-                    <h4>Saúde Coletiva e Epidemiologia (PB/JP)</h4>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um epidemiologista da Secretaria de Saúde de João Pessoa. Analise os dados recentes de casos de dengue na cidade e proponha estratégias de controle e prevenção para as próximas semanas, considerando os bairros com maior incidência.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                <div class="category-section" data-category="farmacos">
+                    <h4>💊 Mecanismos de Ação de Fármacos</h4>
+                    <div class="prompt-list">
+                        <div class="prompt-item">
+                            <p class="prompt-text">Explique o mecanismo de ação da Losartana no tratamento da hipertensão arterial, detalhando sua interação com o sistema renina-angiotensina-aldosterona.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva o mecanismo de ação da Insulina no controle da glicemia, abordando seus efeitos nos tecidos-alvo (fígado, músculo, tecido adiposo).</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Explique o mecanismo de ação dos antibióticos beta-lactâmicos (ex: Penicilina, Amoxicilina) na inibição do crescimento bacteriano.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva o mecanismo de ação dos anti-inflamatórios não esteroidais (AINEs) na redução da dor e inflamação, focando na inibição das ciclooxigenases.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Explique o mecanismo de ação das estatinas (ex: Sinvastatina, Atorvastatina) na redução do colesterol, detalhando a via da HMG-CoA redutase.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva o mecanismo de ação dos diuréticos de alça (ex: Furosemida) na promoção da diurese e seu uso na insuficiência cardíaca.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Explique o mecanismo de ação dos antidepressivos inibidores seletivos da recaptação de serotonina (ISRS) no tratamento da depressão.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva o mecanismo de ação dos anticoagulantes orais diretos (DOACs) como a Rivaroxabana ou Apixabana na prevenção de tromboses.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Explique o mecanismo de ação dos broncodilatadores beta-2 agonistas (ex: Salbutamol) no alívio dos sintomas da asma.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva o mecanismo de ação dos quimioterápicos antimetabólitos (ex: Metotrexato) no tratamento do câncer.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
                     </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva o perfil epidemiológico da tuberculose no estado da Paraíba, incluindo incidência, prevalência, grupos de risco e desafios para o controle da doença.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um sanitarista. Proponha um plano de ação para reduzir a mortalidade infantil em João Pessoa, focando nas principais causas e nas intervenções de saúde pública.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Analise a situação epidemiológica da sífilis congênita na Paraíba nos últimos 5 anos. Quais os fatores que contribuem para a persistência da doença e quais as estratégias de prevenção e controle?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um gestor de saúde. Desenvolva um programa de prevenção e controle da obesidade e doenças crônicas não transmissíveis (DCNTs) para a população adulta de João Pessoa, considerando os recursos disponíveis na atenção primária.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva os desafios e as estratégias para o controle da hanseníase na Paraíba, uma doença endêmica na região. Inclua a importância do diagnóstico precoce e do tratamento supervisionado.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um pesquisador em saúde pública. Proponha um estudo epidemiológico para investigar a prevalência de transtornos mentais comuns na população universitária de João Pessoa, e os fatores de risco associados.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Analise o impacto das condições de saneamento básico na saúde da população de João Pessoa, com foco nas doenças de veiculação hídrica. Quais as áreas mais vulneráveis e as intervenções prioritárias?</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Descreva as ações de vigilância em saúde para o controle da febre chikungunya em João Pessoa, considerando a sazonalidade e a importância da participação comunitária.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
-                    </div>
-                    <div class="prompt-item">
-                        <p class="prompt-text">Aja como um profissional de saúde da família. Elabore um plano de educação em saúde para gestantes de uma Unidade Básica de Saúde em João Pessoa, abordando a prevenção da sífilis congênita e HIV/AIDS.</p>
-                        <button class="copy-btn" onclick="copyPrompt(this)">Copiar</button>
+                </div>
+
+                <div class="category-section" data-category="saude-coletiva">
+                    <h4>🏥 Saúde Coletiva e Epidemiologia (PB/JP)</h4>
+                    <div class="prompt-list">
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um epidemiologista da Secretaria de Saúde de João Pessoa. Analise os dados recentes de casos de dengue na cidade e proponha estratégias de controle e prevenção para as próximas semanas, considerando os bairros com maior incidência.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva o perfil epidemiológico da tuberculose no estado da Paraíba, incluindo incidência, prevalência, grupos de risco e desafios para o controle da doença.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um sanitarista. Proponha um plano de ação para reduzir a mortalidade infantil em João Pessoa, focando nas principais causas e nas intervenções de saúde pública.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Analise a situação epidemiológica da sífilis congênita na Paraíba nos últimos 5 anos. Quais os fatores que contribuem para a persistência da doença e quais as estratégias de prevenção e controle?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um gestor de saúde. Desenvolva um programa de prevenção e controle da obesidade e doenças crônicas não transmissíveis (DCNTs) para a população adulta de João Pessoa, considerando os recursos disponíveis na atenção primária.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva os desafios e as estratégias para o controle da hanseníase na Paraíba, uma doença endêmica na região. Inclua a importância do diagnóstico precoce e do tratamento supervisionado.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um pesquisador em saúde pública. Proponha um estudo epidemiológico para investigar a prevalência de transtornos mentais comuns na população universitária de João Pessoa, e os fatores de risco associados.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Analise o impacto das condições de saneamento básico na saúde da população de João Pessoa, com foco nas doenças de veiculação hídrica. Quais as áreas mais vulneráveis e as intervenções prioritárias?</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Descreva as ações de vigilância em saúde para o controle da febre chikungunya em João Pessoa, considerando a sazonalidade e a importância da participação comunitária.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
+                        <div class="prompt-item">
+                            <p class="prompt-text">Aja como um profissional de saúde da família. Elabore um plano de educação em saúde para gestantes de uma Unidade Básica de Saúde em João Pessoa, abordando a prevenção da sífilis congênita e HIV/AIDS.</p>
+                            <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copiar prompt">Copiar</button>
+                        </div>
                     </div>
                 </div>
             </div>
