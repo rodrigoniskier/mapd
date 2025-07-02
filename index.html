@@ -1,28 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIMP-JP - Plataforma de Aprendizagem</title>
+    <title>MAPD - Plataforma de Aprendizagem</title>
+    <meta name="description" content="Plataforma educacional para estudantes de medicina: Patologia, Imunologia, Microbiologia e Parasitologia com foco em João Pessoa e Paraíba.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="container">
-                <h1>PIMP-JP</h1>
+                <h1>MAPD</h1>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
                     <li><a href="guia_prompt_engineering.html">Guia de Prompt Engineering</a></li>
                     <li><a href="biblioteca_prompts.html">Biblioteca de Prompts</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Módulos</a>
-                        <div class="dropdown-content">
-                            <a href="modulos/patologia/index.html">Patologia</a>
-                            <a href="modulos/imunologia/index.html">Imunologia</a>
-                            <a href="modulos/microbiologia/index.html">Microbiologia</a>
-                            <a href="modulos/parasitologia/index.html">Parasitologia</a>
+                        <a href="#" class="dropbtn" role="button" aria-haspopup="true" aria-expanded="false">Módulos</a>
+                        <div class="dropdown-content" role="menu">
+                            <a href="modulos/patologia/index.html" role="menuitem">Patologia</a>
+                            <a href="modulos/imunologia/index.html" role="menuitem">Imunologia</a>
+                            <a href="modulos/microbiologia/index.html" role="menuitem">Microbiologia</a>
+                            <a href="modulos/parasitologia/index.html" role="menuitem">Parasitologia</a>
                         </div>
                     </li>
                 </ul>
@@ -33,17 +36,22 @@
     <main>
         <section id="hero">
             <div class="container">
-                <h2>Aprenda a Aprender com IA: PIMP-JP</h2>
-                <p>Sua plataforma completa para dominar Patologia, Imunologia, Microbiologia e Parasitologia, com foco na realidade de João Pessoa e Paraíba.</p>
-                <a href="guia_prompt_engineering.html" class="btn">Comece Agora!</a>
+                <h2>Aprenda a Aprender com IA: MAPD</h2>
+                <p>Sua plataforma completa para dominar Mecanismos de Agressão, Patológicos e de Defesa, com foco na realidade de João Pessoa e Paraíba.</p>
+                <a href="guia_prompt_engineering.html" class="btn btn-primary">
+                    <span>Comece Agora!</span>
+                    <span aria-hidden="true">→</span>
+                </a>
             </div>
         </section>
 
         <section id="about">
             <div class="container">
                 <h3>Sobre a PIMP-JP</h3>
-                <p>A PIMP-JP (Plataforma de Imunologia, Microbiologia e Parasitologia - João Pessoa) é uma iniciativa inovadora para estudantes de medicina e profissionais de saúde que buscam aprofundar seus conhecimentos nessas áreas cruciais. Nossa metodologia exclusiva integra o conteúdo programático das Diretrizes Curriculares Nacionais (DCNs) com a aplicação prática da Inteligência Artificial Generativa (IAG), preparando você para os desafios da medicina moderna.</p>
-                <p>Navegue pelos nossos módulos de estudo, explore a biblioteca de prompts para otimizar suas interações com IAGs e aprenda a criar seus próprios prompts eficazes com nosso guia detalhado.</p>
+                <div class="content-text">
+                    <p>A PIMP-JP de MAPD (Plataforma de Imunologia, Microbiologia e Parasitologia - João Pessoa) é uma iniciativa inovadora para estudantes de medicina e profissionais de saúde que buscam aprofundar seus conhecimentos nessas áreas cruciais. Nossa metodologia exclusiva integra o conteúdo programático das Diretrizes Curriculares Nacionais (DCNs) com a aplicação prática da Inteligência Artificial Generativa (IAG), preparando você para os desafios da medicina moderna.</p>
+                    <p>Navegue pelos nossos módulos de estudo, explore a biblioteca de prompts para otimizar suas interações com IAGs e aprenda a criar seus próprios prompts eficazes com nosso guia detalhado.</p>
+                </div>
             </div>
         </section>
 
@@ -51,30 +59,30 @@
             <div class="container">
                 <h3>Nossos Diferenciais</h3>
                 <div class="feature-grid">
-                    <div class="feature-item">
-                        <h4>Conteúdo Alinhado às DCNs</h4>
+                    <article class="feature-item">
+                        <h4>📋 Conteúdo Alinhado às DCNs</h4>
                         <p>Todo o material didático é rigorosamente revisado para garantir conformidade com as Diretrizes Curriculares Nacionais do Curso de Medicina no Brasil.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Contexto Localizado</h4>
+                    </article>
+                    <article class="feature-item">
+                        <h4>🏥 Contexto Localizado</h4>
                         <p>Casos clínicos e dados epidemiológicos são contextualizados para a realidade de João Pessoa e do estado da Paraíba, tornando o aprendizado mais relevante.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Integração com IA Generativa</h4>
+                    </article>
+                    <article class="feature-item">
+                        <h4>🤖 Integração com IA Generativa</h4>
                         <p>Aprenda a utilizar prompts de alta qualidade para aprofundar seus estudos e resolver casos clínicos com o auxílio de ferramentas de IA.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Biblioteca de Prompts Curados</h4>
+                    </article>
+                    <article class="feature-item">
+                        <h4>📚 Biblioteca de Prompts Curados</h4>
                         <p>Acesse uma vasta coleção de prompts prontos para uso, categorizados por área e tipo de raciocínio.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Guia de Prompt Engineering</h4>
+                    </article>
+                    <article class="feature-item">
+                        <h4>⚡ Guia de Prompt Engineering</h4>
                         <p>Desenvolva suas habilidades em prompt engineering e crie prompts personalizados para suas necessidades de estudo.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Design Responsivo e Intuitivo</h4>
+                    </article>
+                    <article class="feature-item">
+                        <h4>📱 Design Responsivo e Intuitivo</h4>
                         <p>Acesse a plataforma de qualquer dispositivo, com uma interface limpa, profissional e fácil de usar.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -83,10 +91,18 @@
             <div class="container">
                 <h3>Explore Nossos Módulos</h3>
                 <div class="module-links">
-                    <a href="modulos/patologia/index.html" class="module-btn">Patologia</a>
-                    <a href="modulos/imunologia/index.html" class="module-btn">Imunologia</a>
-                    <a href="modulos/microbiologia/index.html" class="module-btn">Microbiologia</a>
-                    <a href="modulos/parasitologia/index.html" class="module-btn">Parasitologia</a>
+                    <a href="modulos/patologia/index.html" class="module-btn">
+                        🔬 Patologia
+                    </a>
+                    <a href="modulos/imunologia/index.html" class="module-btn">
+                        🛡️ Imunologia
+                    </a>
+                    <a href="modulos/microbiologia/index.html" class="module-btn">
+                        🦠 Microbiologia
+                    </a>
+                    <a href="modulos/parasitologia/index.html" class="module-btn">
+                        🪱 Parasitologia
+                    </a>
                 </div>
             </div>
         </section>
@@ -94,7 +110,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 PIMP-JP. Todos os direitos reservados.</p>
+            <p>&copy; 2025 MAPD. Todos os direitos reservados.</p>
         </div>
     </footer>
 
