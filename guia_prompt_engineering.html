@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Prompt Engineering - PIMP-JP</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>PIMP-JP</h1>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="guia_prompt_engineering.html">Guia de Prompt Engineering</a></li>
+                    <li><a href="biblioteca_prompts.html">Biblioteca de Prompts</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Módulos</a>
+                        <div class="dropdown-content">
+                            <a href="modulos/patologia/index.html">Patologia</a>
+                            <a href="modulos/imunologia/index.html">Imunologia</a>
+                            <a href="modulos/microbiologia/index.html">Microbiologia</a>
+                            <a href="modulos/parasitologia/index.html">Parasitologia</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="guide-intro">
+            <div class="container">
+                <h2>Guia de Prompt Engineering para Estudantes de Medicina</h2>
+                <p>A Inteligência Artificial Generativa (IAG) é uma ferramenta poderosa que pode revolucionar a forma como você estuda e pratica medicina. No entanto, para extrair o máximo potencial dessas ferramentas, é fundamental saber como 
+
+
+formular suas perguntas, ou 'prompts'. Este guia foi elaborado para te ensinar os princípios fundamentais do Prompt Engineering, capacitando-o a criar prompts eficazes e a otimizar suas interações com IAGs para o estudo da medicina.
+
+                <h3>O que é Prompt Engineering?</h3>
+                <p>Prompt Engineering é a arte e a ciência de projetar e refinar as entradas (prompts) para modelos de linguagem grandes (LLMs) e outras IAGs, a fim de obter as saídas desejadas. Em outras palavras, é a habilidade de 'conversar' com a inteligência artificial de forma clara e estratégica para que ela compreenda sua intenção e gere respostas precisas, relevantes e úteis para seus objetivos de aprendizado em medicina.</p>
+
+                <h3>Por que é importante para estudantes de medicina?</h3>
+                <p>No cenário atual da educação médica, a IAG pode ser uma aliada poderosa. Ela pode auxiliar na compreensão de conceitos complexos, na resolução de casos clínicos, na simulação de cenários, na organização de informações e até mesmo na preparação para exames. Contudo, sem prompts bem elaborados, a IAG pode gerar respostas genéricas, imprecisas ou irrelevantes. Dominar o Prompt Engineering significa transformar a IAG de uma ferramenta passiva em um assistente de estudo ativo e personalizado.</p>
+            </div>
+        </section>
+
+        <section id="principles">
+            <div class="container">
+                <h3>Princípios Fundamentais do Prompt Engineering</h3>
+
+                <h4>1. Atribuição de Persona: 
+
+
+Aja como...</h4>
+                <p>Um dos primeiros e mais eficazes passos para um bom prompt é atribuir uma persona à IAG. Ao fazer isso, você direciona o modelo a adotar um estilo, tom e base de conhecimento específicos, tornando as respostas mais focadas e relevantes. Por exemplo, pedir à IAG para "Aja como um professor de patologia com 20 anos de experiência" ou "Aja como um médico residente de clínica médica" fará com que ela module suas respostas de acordo com essa identidade.</p>
+                <p><strong>Exemplos de Personas Úteis:</strong></p>
+                <ul>
+                    <li><strong>Professor Universitário:</strong> Para explicações aprofundadas e didáticas.</li>
+                    <li><strong>Médico Especialista (Cardiologista, Neurologista, Infectologista):</strong> Para análises clínicas específicas e raciocínio diagnóstico.</li>
+                    <li><strong>Pesquisador Científico:</strong> Para informações baseadas em evidências e discussões sobre metodologias.</li>
+                    <li><strong>Epidemiologista:</strong> Para análises de saúde pública e dados populacionais.</li>
+                    <li><strong>Farmacologista Clínico:</strong> Para detalhes sobre mecanismos de ação de fármacos, interações e efeitos adversos.</li>
+                </ul>
+                <p><strong>Dica:</strong> Seja o mais específico possível na atribuição da persona. Em vez de "Aja como um médico", tente "Aja como um médico de família com experiência em atenção primária à saúde no SUS em João Pessoa".</p>
+
+                <h4>2. Fornecimento de Contexto: Clínico, Epidemiológico, etc.</h4>
+                <p>A IAG não tem conhecimento inerente sobre o seu caso específico ou sobre a situação em que você está pensando. É sua responsabilidade fornecer todo o contexto necessário para que ela possa gerar uma resposta útil. Quanto mais detalhado e relevante for o contexto, melhor será a resposta. Isso inclui dados do paciente, histórico médico, resultados de exames, informações epidemiológicas, e até mesmo o ambiente geográfico (como João Pessoa e Paraíba, no nosso caso).</p>
+                <p><strong>Tipos de Contexto a Fornecer:</strong></p>
+                <ul>
+                    <li><strong>Contexto Clínico:</strong> Idade, sexo, queixa principal, histórico de doenças preexistentes, medicações em uso, alergias, hábitos de vida, resultados de exames físicos e complementares.</li>
+                    <li><strong>Contexto Epidemiológico:</strong> Prevalência de doenças na região, surtos recentes, fatores de risco populacionais, dados de saneamento básico, características socioeconômicas da população.</li>
+                    <li><strong>Contexto Acadêmico:</strong> Se você está estudando para uma prova, preparando um seminário, ou revisando um tópico específico.</li>
+                    <li><strong>Contexto Geográfico:</strong> Mencione explicitamente "João Pessoa", "Paraíba", "Nordeste do Brasil" quando quiser que a IAG considere dados ou particularidades locais.</li>
+                </ul>
+                <p><strong>Exemplo:</strong> Em vez de "O que causa febre?", tente "Um paciente de 35 anos, sexo masculino, residente em João Pessoa, apresenta febre há 3 dias, acompanhada de mialgia e cefaleia. Há um surto de arboviroses na região. Quais as possíveis causas de febre neste contexto?".</p>
+
+                <h4>3. Especificação da Tarefa: Seja Claro e Direto</h4>
+                <p>Após atribuir a persona e fornecer o contexto, você precisa dizer à IAG exatamente o que você quer que ela faça. A tarefa deve ser clara, concisa e inequívoca. Evite ambiguidades e use verbos de ação que indiquem a natureza da sua solicitação.</p>
+                <p><strong>Verbos de Ação Comuns:</strong></p>
+                <ul>
+                    <li><strong>Explique:</strong> Para conceitos, mecanismos, fisiopatologia.</li>
+                    <li><strong>Analise:</strong> Para casos clínicos, resultados de exames.</li>
+                    <li><strong>Compare:</strong> Para diferenciar doenças, tratamentos.</li>
+                    <li><strong>Liste:</strong> Para sintomas, diagnósticos diferenciais, tratamentos.</li>
+                    <li><strong>Resuma:</strong> Para artigos científicos, capítulos de livros.</li>
+                    <li><strong>Crie:</strong> Para cenários, perguntas de múltipla escolha.</li>
+                    <li><strong>Simule:</strong> Para interações paciente-médico, progressão de doença.</li>
+                </ul>
+                <p><strong>Dica:</strong> Quebre tarefas complexas em etapas menores. Se você quer uma análise de caso e um plano de tratamento, peça a análise primeiro e, com base nela, solicite o plano de tratamento em um prompt subsequente.</p>
+
+                <h4>4. Definição do Formato de Saída: Como Você Quer a Resposta?</h4>
+                <p>Para que a IAG organize a informação da maneira mais útil para você, especifique o formato desejado para a resposta. Isso pode variar de um parágrafo simples a uma tabela, lista, roteiro de estudo, ou até mesmo um código de programação (se aplicável).</p>
+                <p><strong>Formatos de Saída Comuns:</strong></p>
+                <ul>
+                    <li><strong>Texto Corrido:</strong> Para explicações gerais.</li>
+                    <li><strong>Lista Numerada/Com Marcadores:</strong> Para sintomas, diagnósticos diferenciais, etapas de um procedimento.</li>
+                    <li><strong>Tabela:</strong> Para comparar informações, organizar dados.</li>
+                    <li><strong>Formato de Caso Clínico:</strong> Para simulações ou elaboração de novos casos.</li>
+                    <li><strong>Roteiro de Estudo:</strong> Para organizar seu aprendizado sobre um tópico.</li>
+                    <li><strong>Perguntas e Respostas:</strong> Para autoavaliação.</li>
+                </ul>
+                <p><strong>Exemplo:</strong> Em vez de "Fale sobre diabetes", tente "Explique a fisiopatologia do Diabetes Mellitus Tipo 2 em formato de lista numerada, destacando os principais pontos".</p>
+
+                <h4>5. A Importância da Iteração e Refinamento Crítico</h4>
+                <p>Raramente o primeiro prompt será perfeito. O Prompt Engineering é um processo iterativo. Você enviará um prompt, analisará a resposta da IAG e, se necessário, refinará seu prompt para obter uma resposta melhor. Isso envolve:</p>
+                <ul>
+                    <li><strong>Análise Crítica da Resposta:</strong> A resposta foi precisa? Completa? Relevante? Omissões? Imprecisões?</li>
+                    <li><strong>Ajuste do Prompt:</strong> Se a resposta não foi satisfatória, identifique o que faltou ou o que foi ambíguo no seu prompt original. Adicione mais contexto, mude a persona, especifique melhor a tarefa ou o formato.</li>
+                    <li><strong>Persistência:</strong> Não desista se a primeira tentativa não for ideal. Cada iteração é uma oportunidade de aprendizado.</li>
+                </ul>
+                <p><strong>Lembre-se:</strong> A IAG é uma ferramenta. A responsabilidade pela veracidade e aplicação do conhecimento gerado é sempre sua. Use-a para complementar seu estudo, não para substituí-lo.</p>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <div class="container">
+                <h3>Conclusão</h3>
+                <p>Dominar o Prompt Engineering é uma habilidade essencial para o estudante de medicina do século XXI. Ao aprender a se comunicar eficazmente com as IAGs, você não apenas otimiza seu processo de aprendizado, mas também se prepara para um futuro onde a inteligência artificial será cada vez mais integrada à prática médica. Comece a praticar hoje mesmo, explore a Biblioteca de Prompts da PIMP-JP e transforme sua jornada de aprendizado!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PIMP-JP. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
